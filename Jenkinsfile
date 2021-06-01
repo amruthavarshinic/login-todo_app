@@ -8,7 +8,7 @@ pipeline {
     stage('Downloade Dependecies') {
       steps {
         sh '''
-          go get && go build
+          go build
         '''  
       }
     }
