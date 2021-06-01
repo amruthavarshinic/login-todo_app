@@ -1,8 +1,18 @@
 pipeline {
-  agent any
+  agent {
+    label {'MASTER'}
+  }
 
   stages {
 
+    stage('Downloade Dependecies') {
+      steps {
+        sh '''
+          go build
+        '''  
+      }
+    }
+    
     stage('Prepare Artifacts') {
       steps {
         sh '''
