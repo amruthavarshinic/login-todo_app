@@ -5,5 +5,5 @@ todo (
   PROJECT_NAME          : "TODO",
   SLAVE_LABEL           : "NODEJS",
   SKIP_NEXUS_UPLOAD     : false,
-  APP_TYPE              : "NODEJS"
+  APP_TYPE              : "GO"
 )
