@@ -1,7 +1,7 @@
 [Unit]
 Description = login Service
 [Service]
-User=todoapp
+User=root
 Environment=AUTH_API_PORT=LOGINPORT
 Environment=USERS_API_ADDRESS=http://USERSENDPOINT:8080
 ExecStart=/root/go/src/login/login
