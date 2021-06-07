@@ -2,7 +2,7 @@
 Description = login Service
 [Service]
 User=todoapp
-Environment=AUTH_API_PORT=8080
+Environment=AUTH_API_PORT=LOGIPORT
 Environment=USERS_API_ADDRESS=http://USERSENDPOINT:8080
 ExecStart=/root/go/src/login/login
 Restart=on-failure
