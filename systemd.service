@@ -9,4 +9,4 @@ Restart=on-failure
 SyslogIdentifier=login
 
 [Install]
-WantedBy=multi-user.targets
+WantedBy=multi-user.target
