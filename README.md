@@ -89,3 +89,4 @@ Finally start the Login Module once to effect the changes by the below cammand.
 ;)
 # RELEASE 0.0.1 -DATE - 03-06-2021
 # RELEASE 0.0.2 -DATE - 04-06-2021
+# RELEASE 0.0.3 -DATE - 09-06-2021
