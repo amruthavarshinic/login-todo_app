@@ -1,24 +1,18 @@
 # Login :
 
-This service is written on Golang.
-
-Create a user for running the application
+This service is written on Golang. So Run the following command as a user with sudo privileges to download and extract the Go binary archive in the /usr/local directory:
 
 ```
   # apt update
-
-  # useradd -m -s /bin/bash todoapp
-
-  # cd /home/todoapp/
-```
-
-Run the following command as a user with sudo privileges to download and extract the Go binary archive in the /usr/local directory:
-
-```
   # wget -c https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
   # apt install goalng -y
 ```
+Create a user for running the application
 
+```  
+  # useradd -m -s /bin/bash todoapp
+  # cd /home/todoapp/
+```
 Verify the installationby simply runningthe command go version.
 
 ```
@@ -38,7 +32,6 @@ This can be done by appending the following line either to the /etc/profile file
 
 ```
   # ~/.profile
-
   # export PATH=$PATH:/usr/local/go/bin
 ```
 
@@ -51,15 +44,14 @@ Save the file, and load the new PATH environment variable into the current shell
 By default, the GOPATH variable, which specifies the location of the workspace is set to $HOME/go. To create the workspace directory type:
 
 ```
-  #mkdir ~/go
+  # mkdir ~/go
+  # cd ~/go
 ```
 
 Inside the workspace create a new directory /src
 
 ```
-  # mkdir -p ~/go/src
-
-  # cd  ~/go/src/
+  # mkdir src && cd src
 ```
 
 Lets clone the code from github repository 
@@ -73,17 +65,14 @@ Navigate** to the ~/go/src/login/login directory and run go build to build the p
 
 ```
   # apt install go-dep
-
   # go get
-
   # go build
 ```
 
 Finally start the Login Module once to effect the changes by the below cammand.
 
 ```
-  # mv /root/go/src/login/systemd.service /etc/systemd/system/login.service 
-  
+  # mv /root/go/src/login/systemd.service /etc/systemd/system/login.service   
   # systemctl daemon-reload && systemctl start login && systemctl enable login 
 ```
 ;) ;) ;)
